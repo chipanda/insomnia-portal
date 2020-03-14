@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>检测浏览器是否支持passive event listener | Insomnia&#39;s Blog</title>
+    <meta name="description" content="前端技术小结">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.24d7f512.css" as="style"><link rel="preload" href="/assets/js/app.32b5a6ef.js" as="script"><link rel="preload" href="/assets/js/2.9aa5139d.js" as="script"><link rel="preload" href="/assets/js/9.d8a80012.js" as="script"><link rel="prefetch" href="/assets/js/10.ea992c54.js"><link rel="prefetch" href="/assets/js/11.79fa7426.js"><link rel="prefetch" href="/assets/js/12.ecc788b6.js"><link rel="prefetch" href="/assets/js/3.7607fff1.js"><link rel="prefetch" href="/assets/js/4.5f96f5bb.js"><link rel="prefetch" href="/assets/js/5.46a36351.js"><link rel="prefetch" href="/assets/js/6.8b4fda01.js"><link rel="prefetch" href="/assets/js/7.efc36d86.js"><link rel="prefetch" href="/assets/js/8.8f49f68f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.24d7f512.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Insomnia's Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Notes</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/notes/passive-check.html" class="active sidebar-link">检测浏览器是否支持passive event listener</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="检测浏览器是否支持passive-event-listener"><a href="#检测浏览器是否支持passive-event-listener" class="header-anchor">#</a> 检测浏览器是否支持passive event listener</h3> <div class="language- extra-class"><pre class="language-text"><code>try {
+    const opts = {};
+    let supportsPassive = false;
+    Object.defineProperty(opts, 'passive', {
+      get() {
+        supportsPassive = true;
+      }
+    });
+    window.addEventListener('test-passive', null, opts);
+ } catch (e) {}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/1.html" class="prev">
+        React中的类
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.32b5a6ef.js" defer></script><script src="/assets/js/2.9aa5139d.js" defer></script><script src="/assets/js/9.d8a80012.js" defer></script>
+  </body>
+</html>

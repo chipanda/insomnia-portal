@@ -11,12 +11,23 @@ module.exports = {
     sidebar: [
       {
         title: 'React',
+        collapsable: false,
         children: [
-          '/react/1'
+          '/react/15code'
+        ]
+      },
+      {
+        title: 'JavaScript',
+        collapsable: false,
+        children: [
+          ['/js/prototype', '原型链'],
+          '/js/deepcopy',
+          '/js/decorator',
         ]
       },
       {
         title: 'Notes',
+        collapsable: false,
         children: [
           '/notes/passive-check'
         ]

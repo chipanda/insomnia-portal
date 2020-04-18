@@ -4,6 +4,8 @@ title: 进阶版decorator，为class箭头函数添加装饰器
 
 ## 前言
 
+本篇decorator的支持使用babel-plugin-transform-decorators-legacy方案，因为装饰器还不是一个稳定的特性，不同支持下的内部实现方案不同。
+
 本篇共3个章节。
 
 前2个章节介绍class中两种方式定义方法的不同、decorator如何作用于class的方法。
